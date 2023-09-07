@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+main {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  background-color: black;
+}
+
+#sprite {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(./assets/frames/spritesheet.png);
+  mix-blend-mode: screen;
+  animation: fireAnimation 1s steps(30) infinite;
+  z-index: 1000;
+}
+
+@keyframes fireAnimation {
+  from {
+    background-position: 0;
+  }
+  to {
+    background-position: 38400px;
+  }
+}
+
+.background-image {
+  position: absolute;
+  overflow: visible;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  transition: 0.1s;
+}
+.background-image.bg {
+  z-index: 10;
+}
+.witcher {
+  z-index: 50;
+  animation: witcherMove 1s ease;
+}
+.monster {
+  z-index: 40;
+  animation: monsterMove 1s ease;
+}
+
+.sparks {
+  z-index: 80;
+}
+.smoke {
+  z-index: 60;
+}
+
+@keyframes witcherMove {
+  from {
+    transform: translate(0%, -50%);
+    opacity: 0.45;
+  }
+  to {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+}
+
+@keyframes monsterMove {
+  from {
+    transform: translate(-150%, -50%);
+
+    opacity: 0.45;
+  }
+  to {
+    transform: translate(-50%, -50%);
+
+    opacity: 1;
+  }
+}
+
+.bg.blur {
+  filter: blur(5px);
+  border: none;
+  width: 110vw;
+  height: 110vh;
+  overflow: hidden;
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parallax</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <img
+        class="background-image bg parallax blur"
+        src="./assets/witcherImage/fondo.png"
+      />
+      <img
+        class="background-image bg parallax"
+        data-speedx="0.00"
+        data-speedy="0.085"
+        data-speedz="1.55"
+        data-rotation="0.10"
+        src="./assets/witcherImage/fondo.png"
+      />
+      <img
+        class="background-image sparks parallax"
+        data-speedz="1.5"
+        src="./assets/witcherImage/glows.png"
+      />
+
+      <img
+        class="background-image smoke parallax"
+        data-speedz="1.25"
+        src="./assets/witcherImage/smoke.png"
+      />
+      <img
+        class="background-image monster parallax"
+        data-speedx="0.175"
+        data-speedy="0.15"
+        data-speedz="2.9"
+        data-rotation=".10"
+        src="./assets/witcherImage/m1.png"
+      />
+      <img
+        class="background-image witcher parallax"
+        data-speedx=".125"
+        data-speedy=".025"
+        data-speedz="1"
+        data-rotation=".15"
+        src="./assets/witcherImage/w1.png"
+      />
+      <div id="sprite" class=""></div>
+    </main>
+    <script type="module" src="index.js"></script>
+  </body>
+</html>
